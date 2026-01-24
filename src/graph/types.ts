@@ -1,6 +1,11 @@
 import { ClassroomAttributes } from "../models/Classroom";
 
-export type NodeType = "classroom" | "connector" | "stairs" | "elevator";
+export enum NodeType {
+	classroom,
+	connector,
+	stairs,
+	elevator,
+}
 
 export type GraphNode = Omit<ClassroomAttributes, "id"> & {
 	type: NodeType;
@@ -23,6 +28,6 @@ export type FloorFile = {
 	edges: GraphEdge[];
 };
 
-export type RoomLinks = Record<string, string>;
+export type LocationLinks = Record<string, string>;
 
 export type Adjacency = Map<string, { to: string; weight: number }[]>;

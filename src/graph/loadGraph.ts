@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { ClassroomRepository } from "../repositories/classroom";
-import { Adjacency, FloorFile, GraphEdge, GraphNode, RoomLinks } from "./types";
+import { Adjacency, FloorFile, GraphEdge, GraphNode, LocationLinks } from "./types";
 
 const classroomRepository = new ClassroomRepository();
 
@@ -37,11 +37,11 @@ export const loadGraph = async () => {
 		});
 	}
 
-	const roomLinks: RoomLinks = JSON.parse(
-		fs.readFileSync(path.join(graphDirectory, "roomLinks.json"), "utf8")
+	const locationLinks: LocationLinks = JSON.parse(
+		fs.readFileSync(path.join(graphDirectory, "locationLinks.json"), "utf8")
 	);
 
-	for (const [roomTitle, connectorTitle] of Object.entries(roomLinks)) {
+	for (const [roomTitle, connectorTitle] of Object.entries(locationLinks)) {
 		if (nodes.has(roomTitle) && nodes.has(connectorTitle)) {
 			edges.push({
 				from: roomTitle,

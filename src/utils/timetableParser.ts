@@ -179,7 +179,7 @@ export class TimetableParser {
 	): Array<{ subgroupName: string; column: number }> {
 		const subgroups: Array<{ subgroupName: string; column: number }> = [];
 
-		let column = mainColumn;
+		let column = 3;
 		while (column < subgroupsRow.length) {
 			const subgroupName = subgroupsRow[column];
 
@@ -191,7 +191,7 @@ export class TimetableParser {
 				subgroups.push({ subgroupName, column });
 				column++;
 			} else {
-				break;
+				column++;
 			}
 		}
 

@@ -1,7 +1,6 @@
 import dotenv from "dotenv";
 import app from "./app";
 import sequelize from "./config/database";
-import { findPath } from "./graph/findPath";
 
 dotenv.config();
 
@@ -14,9 +13,6 @@ const start = async () => {
 	app.listen(PORT, () => {
 		console.log(`Server running on http://localhost:${PORT}`);
 	});
-
-	const path = await findPath("301", "309");
-	console.log(path);
 };
 
 start();

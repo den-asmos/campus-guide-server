@@ -5,6 +5,7 @@ import passport from "passport";
 import "./config/passport";
 import authRoutes from "./routes/auth";
 import classroomRoutes from "./routes/classroom";
+import directionRoutes from "./routes/direction";
 import timetableRoutes from "./routes/timetable";
 
 dotenv.config();
@@ -16,6 +17,7 @@ app.use(passport.initialize());
 
 app.use("/api/timetable", timetableRoutes);
 app.use("/api/classroom", classroomRoutes);
+app.use("/api/direction", directionRoutes);
 app.use("/api/auth", authRoutes);
 
 export default app;

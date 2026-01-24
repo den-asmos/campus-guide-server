@@ -2,283 +2,355 @@
 	"connectors": [
 		{
 			"title": "301-302",
-			"description": "301-302",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 50
+			"latitude": 265,
+			"longitude": 93
 		},
 		{
-			"title": "301А-304",
-			"description": "301А-304",
+			"title": "301A-304",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 135
+			"latitude": 265,
+			"longitude": 231
 		},
 		{
 			"title": "303-stairs31",
-			"description": "303-stairs31",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 200
+			"latitude": 265,
+			"longitude": 329
+		},
+		{
+			"title": "303-306",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 3,
+			"latitude": 265,
+			"longitude": 427
 		},
 		{
 			"title": "elevator3-306",
-			"description": "elevator3-306",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 305
+			"latitude": 265,
+			"longitude": 506
 		},
 		{
-			"title": "305-306А",
-			"description": "305-306А",
+			"title": "305-306",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 375
+			"latitude": 265,
+			"longitude": 566
+		},
+		{
+			"title": "305-306A",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 3,
+			"latitude": 265,
+			"longitude": 625
 		},
 		{
 			"title": "305-347",
-			"description": "305-347",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 425
+			"latitude": 265,
+			"longitude": 703
 		},
 		{
 			"title": "307-308",
-			"description": "307-308",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 485
+			"latitude": 265,
+			"longitude": 801
 		},
 		{
 			"title": "309-308",
-			"description": "309-308",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 545
+			"latitude": 265,
+			"longitude": 899
 		},
 		{
 			"title": "309-310",
-			"description": "309-310",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 605
+			"latitude": 265,
+			"longitude": 997
 		},
 		{
-			"title": "309А-312",
-			"description": "309А-312",
+			"title": "309A-312",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 665
+			"latitude": 265,
+			"longitude": 1095
+		},
+		{
+			"title": "309A-314",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 3,
+			"latitude": 265,
+			"longitude": 1156
 		},
 		{
 			"title": "311-314",
-			"description": "311-314",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 725
+			"latitude": 265,
+			"longitude": 1217
 		},
 		{
 			"title": "313-wall",
-			"description": "313-wall",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 825
+			"latitude": 265,
+			"longitude": 1355
 		},
 		{
-			"title": "315-wall",
-			"description": "315-wall",
+			"title": "315-316",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 905
+			"latitude": 265,
+			"longitude": 1493
 		},
 		{
 			"title": "317-316",
-			"description": "317-316",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 965
+			"latitude": 265,
+			"longitude": 1591
 		},
 		{
-			"title": "317А-stairs32",
-			"description": "317А-stairs32",
+			"title": "317A-stairs32",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1035
+			"latitude": 265,
+			"longitude": 1709
 		},
 		{
 			"title": "319-346",
-			"description": "319-346",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1100
+			"latitude": 265,
+			"longitude": 1807
 		},
 		{
 			"title": "319-345",
-			"description": "319-345",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1145
+			"latitude": 265,
+			"longitude": 1885
 		},
 		{
 			"title": "319-318",
-			"description": "319-318",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1195
+			"latitude": 265,
+			"longitude": 1945
+		},
+		{
+			"title": "321-318",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 3,
+			"latitude": 265,
+			"longitude": 1984
 		},
 		{
 			"title": "321-wall",
-			"description": "321-wall",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1255
+			"latitude": 265,
+			"longitude": 2083
 		},
 		{
 			"title": "323-wall",
-			"description": "323-wall",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1340
+			"latitude": 265,
+			"longitude": 2203
 		},
 		{
 			"title": "325-320",
-			"description": "325-320",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1385
+			"latitude": 265,
+			"longitude": 2281
 		},
 		{
 			"title": "327-320",
-			"description": "327-320",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1435
+			"latitude": 265,
+			"longitude": 2359
 		},
 		{
 			"title": "329-320",
-			"description": "329-320",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1480
+			"latitude": 265,
+			"longitude": 2437
 		},
 		{
-			"title": "329А-322",
-			"description": "329А-322",
+			"title": "329A-322",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1540
+			"latitude": 265,
+			"longitude": 2535
 		},
 		{
 			"title": "331-324",
-			"description": "331-324",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1600
+			"latitude": 265,
+			"longitude": 2633
+		},
+		{
+			"title": "331-326",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 3,
+			"latitude": 265,
+			"longitude": 2692
 		},
 		{
 			"title": "333-326",
-			"description": "333-326",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1685
+			"latitude": 265,
+			"longitude": 2792
+		},
+		{
+			"title": "333-328",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 3,
+			"latitude": 265,
+			"longitude": 2891
 		},
 		{
 			"title": "335-328",
-			"description": "335-328",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1770
+			"latitude": 265,
+			"longitude": 2931
+		},
+		{
+			"title": "335-344",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 3,
+			"latitude": 265,
+			"longitude": 2971
 		},
 		{
 			"title": "337-344",
-			"description": "337-344",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1820
+			"latitude": 265,
+			"longitude": 3009
 		},
 		{
 			"title": "337-342",
-			"description": "337-342",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1865
+			"latitude": 265,
+			"longitude": 3066
 		},
 		{
 			"title": "339-stairs33",
-			"description": "339-stairs33",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 1915
+			"latitude": 265,
+			"longitude": 3144
+		},
+		{
+			"title": "341-stairs33",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 3,
+			"latitude": 265,
+			"longitude": 3203
 		},
 		{
 			"title": "341-330",
-			"description": "341-330",
+			"description": "Коридор",
 			"type": "connector",
 			"floor": 3,
-			"latitude": 160,
-			"longitude": 2010
+			"latitude": 265,
+			"longitude": 3302
 		}
 	],
 	"edges": [
-		{ "from": "301-302", "to": "301А-304", "weight": 1 },
-		{ "from": "301А-304", "to": "303-stairs31", "weight": 1 },
-		{ "from": "303-stairs31", "to": "elevator3-306", "weight": 1 },
-		{ "from": "elevator3-306", "to": "305-306А", "weight": 1 },
-		{ "from": "305-306А", "to": "305-347", "weight": 1 },
+		{ "from": "301-302", "to": "301A-304", "weight": 1 },
+		{ "from": "301A-304", "to": "303-stairs31", "weight": 1 },
+		{ "from": "303-stairs31", "to": "303-306", "weight": 1 },
+		{ "from": "303-306", "to": "elevator3-306", "weight": 1 },
+		{ "from": "elevator3-306", "to": "305-306", "weight": 1 },
+		{ "from": "305-306", "to": "305-306A", "weight": 1 },
+		{ "from": "305-306A", "to": "305-347", "weight": 1 },
 		{ "from": "305-347", "to": "307-308", "weight": 1 },
 		{ "from": "307-308", "to": "309-308", "weight": 1 },
 		{ "from": "309-308", "to": "309-310", "weight": 1 },
-		{ "from": "309-310", "to": "309А-312", "weight": 1 },
-		{ "from": "309А-312", "to": "311-314", "weight": 1 },
+		{ "from": "309-310", "to": "309A-312", "weight": 1 },
+		{ "from": "309A-312", "to": "309A-314", "weight": 1 },
+		{ "from": "309A-314", "to": "311-314", "weight": 1 },
 		{ "from": "311-314", "to": "313-wall", "weight": 1 },
-		{ "from": "313-wall", "to": "315-wall", "weight": 1 },
-		{ "from": "315-wall", "to": "317-316", "weight": 1 },
-		{ "from": "317-316", "to": "317А-stairs32", "weight": 1 },
-		{ "from": "317А-stairs32", "to": "319-346", "weight": 1 },
+		{ "from": "313-wall", "to": "315-316", "weight": 1 },
+		{ "from": "315-316", "to": "317-316", "weight": 1 },
+		{ "from": "317-316", "to": "317A-stairs32", "weight": 1 },
+		{ "from": "317A-stairs32", "to": "319-346", "weight": 1 },
 		{ "from": "319-346", "to": "319-345", "weight": 1 },
 		{ "from": "319-345", "to": "319-318", "weight": 1 },
-		{ "from": "319-318", "to": "321-wall", "weight": 1 },
+		{ "from": "319-318", "to": "321-318", "weight": 1 },
+		{ "from": "321-318", "to": "321-wall", "weight": 1 },
 		{ "from": "321-wall", "to": "323-wall", "weight": 1 },
 		{ "from": "323-wall", "to": "325-320", "weight": 1 },
 		{ "from": "325-320", "to": "327-320", "weight": 1 },
 		{ "from": "327-320", "to": "329-320", "weight": 1 },
-		{ "from": "329-320", "to": "329А-322", "weight": 1 },
-		{ "from": "329А-322", "to": "331-324", "weight": 1 },
-		{ "from": "331-324", "to": "333-326", "weight": 1 },
+		{ "from": "329-320", "to": "329A-322", "weight": 1 },
+		{ "from": "329A-322", "to": "331-324", "weight": 1 },
+		{ "from": "331-324", "to": "331-326", "weight": 1 },
+		{ "from": "331-326", "to": "333-326", "weight": 1 },
 		{ "from": "333-326", "to": "335-328", "weight": 1 },
-		{ "from": "335-328", "to": "337-344", "weight": 1 },
+		{ "from": "333-328", "to": "335-328", "weight": 1 },
+		{ "from": "335-328", "to": "335-344", "weight": 1 },
+		{ "from": "335-344", "to": "337-344", "weight": 1 },
 		{ "from": "337-344", "to": "337-342", "weight": 1 },
 		{ "from": "337-342", "to": "339-stairs33", "weight": 1 },
-		{ "from": "339-stairs33", "to": "341-330", "weight": 1 }
+		{ "from": "339-stairs33", "to": "341-stairs33", "weight": 1 },
+		{ "from": "341-stairs33", "to": "341-330", "weight": 1 }
 	]
 }
