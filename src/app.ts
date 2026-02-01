@@ -7,6 +7,7 @@ import authRoutes from "./routes/auth";
 import classroomRoutes from "./routes/classroom";
 import directionRoutes from "./routes/direction";
 import timetableRoutes from "./routes/timetable";
+import userRoutes from "./routes/user";
 
 dotenv.config();
 
@@ -19,5 +20,6 @@ app.use("/api/timetable", timetableRoutes);
 app.use("/api/classroom", classroomRoutes);
 app.use("/api/direction", directionRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/user", userRoutes);
 
 export default app;

@@ -17,7 +17,10 @@ export class UserRepository {
 		return await User.create(userData);
 	}
 
-	async update(id: number, userData: Partial<UserAttributes>) {
+	async update(
+		id: number,
+		userData: Partial<Omit<UserAttributes, "password">>,
+	) {
 		const user = await User.findByPk(id);
 
 		if (!user) {
@@ -25,6 +28,16 @@ export class UserRepository {
 		}
 
 		return await user.update(userData);
+	}
+
+	async updatePassword(id: number, password: string) {
+		const user = await User.findByPk(id);
+
+		if (!user) {
+			throw new Error("Пользователь не найден");
+		}
+
+		return await user.update({ password });
 	}
 
 	async findAll() {

@@ -245,7 +245,7 @@ User.init(
 			allowNull: false,
 			validate: {
 				notEmpty: true,
-				len: [6, 20],
+				len: [6, 255],
 			},
 		},
 		role: {

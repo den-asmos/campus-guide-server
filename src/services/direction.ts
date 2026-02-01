@@ -7,7 +7,7 @@ export class DirectionService {
 		this.directionRepository = new DirectionRepository();
 	}
 
-	getDirection = async (data: { origin: string; destination: string }) => {
+	buildDirection = async (data: { origin: string; destination: string }) => {
 		return await this.directionRepository.findDirection(data);
 	};
 }

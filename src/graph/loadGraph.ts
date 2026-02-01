@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { ClassroomRepository } from "../repositories/classroom";
-import { Adjacency, FloorFile, GraphEdge, GraphNode, LocationLinks } from "./types";
+import { Adjacency, FloorFile, GraphEdge, GraphNode, LocationLinks, NodeType } from "./types";
 
 const classroomRepository = new ClassroomRepository();
 
@@ -33,7 +33,7 @@ export const loadGraph = async () => {
 			floor: classroom.floor,
 			latitude: classroom.latitude,
 			longitude: classroom.longitude,
-			type: "classroom",
+			type: NodeType.classroom,
 		});
 	}
 

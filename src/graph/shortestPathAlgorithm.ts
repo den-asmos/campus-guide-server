@@ -3,47 +3,60 @@ import { Graph } from "./types";
 export const shortestPathAlgorithm = (
 	graph: Graph,
 	origin: string,
-	destination: string
-) => {
+	destination: string,
+): string[] | null => {
+	if (!graph.nodes.has(origin) || !graph.nodes.has(destination)) {
+		return null;
+	}
+
+	if (origin === destination) {
+		return [origin];
+	}
+
 	const minDistance = new Map<string, number>();
 	const previous = new Map<string, string | null>();
-	const visited = new Set<string>();
+	const unvisited = new Set<string>(graph.nodes.keys());
 
 	for (const title of graph.nodes.keys()) {
 		minDistance.set(title, Infinity);
 		previous.set(title, null);
 	}
-
 	minDistance.set(origin, 0);
 
-	while (true) {
+	while (unvisited.size > 0) {
 		let current: string | null = null;
 		let currentMinDistance = Infinity;
 
-		for (const [title, distance] of minDistance.entries()) {
-			if (!visited.has(title) && distance < currentMinDistance) {
+		for (const node of unvisited) {
+			const distance = minDistance.get(node)!;
+			if (distance < currentMinDistance) {
 				currentMinDistance = distance;
-				current = title;
+				current = node;
 			}
 		}
 
-		if (current === null) {
+		if (current === null || currentMinDistance === Infinity) {
 			break;
 		}
+
 		if (current === destination) {
 			break;
 		}
 
-		visited.add(current);
+		unvisited.delete(current);
 
-		const neighbors = graph.adjacency.get(current) || [];
+		const neighbors = graph.adjacency.get(current);
+		if (neighbors) {
+			for (const { to, weight } of neighbors) {
+				if (!unvisited.has(to)) {
+					continue;
+				}
 
-		for (const { to, weight } of neighbors) {
-			const alternative = minDistance.get(current)! + weight;
-
-			if (alternative < minDistance.get(to)!) {
-				minDistance.set(to, alternative);
-				previous.set(to, current);
+				const alternative = currentMinDistance + weight;
+				if (alternative < minDistance.get(to)!) {
+					minDistance.set(to, alternative);
+					previous.set(to, current);
+				}
 			}
 		}
 	}
@@ -53,12 +66,12 @@ export const shortestPathAlgorithm = (
 	}
 
 	const path: string[] = [];
-	let pathPart: string | null = destination;
+	let current: string | null = destination;
 
-	while (pathPart !== null) {
-		path.unshift(pathPart);
-		pathPart = previous.get(pathPart)!;
+	while (current !== null) {
+		path.push(current);
+		current = previous.get(current)!;
 	}
 
-	return path;
+	return path.reverse();
 };

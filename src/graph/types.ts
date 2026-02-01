@@ -11,6 +11,8 @@ export type GraphNode = Omit<ClassroomAttributes, "id"> & {
 	type: NodeType;
 };
 
+export type DirectionNode = GraphNode & { points: string };
+
 export type GraphEdge = {
 	from: string;
 	to: string;

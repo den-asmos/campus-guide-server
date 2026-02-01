@@ -10,7 +10,9 @@ export class DirectionController {
 
 	getDirection = async (req: Request, res: Response) => {
 		try {
-			const direction = await this.directionService.getDirection(req.validatedQuery);
+			const direction = await this.directionService.buildDirection(
+				req.validatedQuery,
+			);
 			res.json(direction);
 		} catch (error: any) {
 			res.status(500).json({
