@@ -197,11 +197,15 @@ export interface UserAttributes {
 	gender: Gender | null;
 }
 
-export interface UserCreateAttributes
-	extends Optional<
-		UserAttributes,
-		"id" | "faculty" | "course" | "group" | "avatar" | "birthDate" | "gender"
-	> {}
+export interface UserCreateAttributes extends Optional<
+	UserAttributes,
+	"id" | "faculty" | "course" | "group" | "avatar" | "birthDate" | "gender"
+> {}
+
+export interface UserUpdateAttributes extends Omit<
+	UserAttributes,
+	"id" | "login" | "email" | "firstName" | "lastName"
+> {}
 
 interface User extends UserAttributes {}
 
@@ -322,7 +326,7 @@ User.init(
 				}
 			},
 		},
-	}
+	},
 );
 
 export default User;

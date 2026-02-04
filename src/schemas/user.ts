@@ -9,7 +9,6 @@ export const updateProfileSchema = Joi.object({
 	group: Joi.string()
 		.valid(...Object.values(Group))
 		.allow(null),
-	avatar: Joi.string().uri().allow(null),
 	birthDate: Joi.date().max("now").allow(null),
 	gender: Joi.string()
 		.valid(...Object.values(Gender))

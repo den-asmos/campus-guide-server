@@ -1,4 +1,4 @@
-import { DataTypes, Model } from "sequelize";
+import { DataTypes, Model, Optional } from "sequelize";
 import sequelize from "../config/database";
 import User from "./User";
 
@@ -10,10 +10,15 @@ export interface PasswordResetAttributes {
 	isUsed: boolean;
 }
 
+export interface PasswordResetCreateAttributes extends Optional<
+	PasswordResetAttributes,
+	"id"
+> {}
+
 interface PasswordReset extends PasswordResetAttributes {}
 
 class PasswordReset
-	extends Model<PasswordResetAttributes>
+	extends Model<PasswordResetAttributes, PasswordResetCreateAttributes>
 	implements PasswordResetAttributes {}
 
 PasswordReset.init(

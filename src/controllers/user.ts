@@ -6,9 +6,9 @@ export class UserController {
 
 	constructor() {
 		this.userService = new UserService();
-  }
-  
-  getAllUsers = async (req: Request, res: Response) => {
+	}
+
+	getAllUsers = async (req: Request, res: Response) => {
 		try {
 			const users = await this.userService.getAllUsers();
 			res.json(users);
@@ -26,12 +26,46 @@ export class UserController {
 				req.user!.id,
 				req.body,
 			);
-			res.json({ user: updatedUser });
+			res.status(200).json({ user: updatedUser });
 		} catch (error: any) {
-			res.status(400).json({
+			res.status(500).json({
 				message: "Ошибка изменения данных пользователя",
 				error: error.message,
 			});
 		}
-  };
+	};
+
+	updateAvatar = async (req: Request, res: Response) => {
+		try {
+			if (!req.file) {
+				res.status(400).json({
+					message: "Отсутствует файл аватара",
+				});
+				return;
+			}
+
+			const response = await this.userService.updateAvatar(
+				req.user!.id,
+				req.file.buffer,
+			);
+			res.status(200).json(response);
+		} catch (error: any) {
+			res.status(500).json({
+				message: "Ошибка изменения аватара",
+				error: error.message,
+			});
+		}
+	};
+
+	deleteAvatar = async (req: Request, res: Response) => {
+		try {
+			const response = await this.userService.deleteAvatar(req.user!.id);
+			res.status(200).json(response);
+		} catch (error: any) {
+			res.status(500).json({
+				message: "Ошибка удаления аватара",
+				error: error.message,
+			});
+		}
+	};
 }

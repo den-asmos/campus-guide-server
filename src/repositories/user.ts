@@ -1,4 +1,7 @@
-import User, { UserAttributes, UserCreateAttributes } from "../models/User";
+import User, {
+	UserCreateAttributes,
+	UserUpdateAttributes
+} from "../models/User";
 
 export class UserRepository {
 	async findById(id: number) {
@@ -17,10 +20,7 @@ export class UserRepository {
 		return await User.create(userData);
 	}
 
-	async update(
-		id: number,
-		userData: Partial<Omit<UserAttributes, "password">>,
-	) {
+	async update(id: number, userData: Partial<UserUpdateAttributes>) {
 		const user = await User.findByPk(id);
 
 		if (!user) {
@@ -44,5 +44,25 @@ export class UserRepository {
 		return await User.findAll({
 			attributes: { exclude: ["password"] },
 		});
+	}
+
+	async findAvatarUrl(id: number) {
+		const user = await User.findByPk(id, { attributes: ["avatar"] });
+
+		if (!user) {
+			throw new Error("Пользователь не найден");
+		}
+
+		return user.avatar;
+	}
+
+	async deleteAvatar(id: number) {
+		const user = await User.findByPk(id);
+
+		if (!user) {
+			throw new Error("Пользователь не найден");
+		}
+
+		return await user.update({ avatar: null });
 	}
 }

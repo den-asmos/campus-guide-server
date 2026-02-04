@@ -3,6 +3,7 @@ import { PasswordResetController } from "../controllers/passwordReset";
 import { UserController } from "../controllers/user";
 import { authenticateJwt } from "../middlewares/auth";
 import { rateLimiter } from "../middlewares/rateLimiter";
+import { upload } from "../middlewares/uploadImage";
 import { validate } from "../middlewares/validation";
 import {
 	requestPasswordResetSchema,
@@ -15,11 +16,11 @@ const router = Router();
 const userController = new UserController();
 const passwordResetController = new PasswordResetController();
 
-router.put(
-	"/profile",
-	validate({ body: updateProfileSchema }),
+router.post(
+	"/avatar",
 	authenticateJwt,
-	userController.updateProfile,
+	upload.single("avatar"),
+	userController.updateAvatar,
 );
 
 router.post(
@@ -42,5 +43,14 @@ router.post(
 	rateLimiter({ maxRequests: 3, windowMs: 15 * 60 * 1000 }),
 	passwordResetController.resetPassword,
 );
+
+router.put(
+	"/profile",
+	validate({ body: updateProfileSchema }),
+	authenticateJwt,
+	userController.updateProfile,
+);
+
+router.delete("/avatar", authenticateJwt, userController.deleteAvatar);
 
 export default router;
