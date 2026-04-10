@@ -12,7 +12,7 @@ export enum Floor {
 }
 
 export interface ClassroomAttributes {
-	id: number;
+	id: string;
 	title: string;
 	description: string;
 	floor: Floor;
@@ -29,8 +29,7 @@ class Classroom
 Classroom.init(
 	{
 		id: {
-			type: DataTypes.INTEGER,
-			autoIncrement: true,
+			type: DataTypes.STRING,
 			primaryKey: true,
 			allowNull: false,
 		},

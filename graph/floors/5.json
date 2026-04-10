@@ -1,0 +1,425 @@
+{
+	"connectors": [
+		{
+			"id": "501-502",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 53,
+			"title": "501-502"
+		},
+		{
+			"id": "501A-502",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 151,
+			"title": "501A-502"
+		},
+		{
+			"id": "503-504",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 229,
+			"title": "503-504"
+		},
+		{
+			"id": "545-stairs51",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 327,
+			"title": "545-stairs51"
+		},
+		{
+			"id": "545-506",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 425,
+			"title": "545-506"
+		},
+		{
+			"id": "elevator5-508",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 503,
+			"title": "elevator5-508"
+		},
+		{
+			"id": "505-510",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 581,
+			"title": "505-510"
+		},
+		{
+			"id": "505-510A",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 661,
+			"title": "505-510A"
+		},
+		{
+			"id": "505-510B",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 742,
+			"title": "505-510B"
+		},
+		{
+			"id": "507-512",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 840,
+			"title": "507-512"
+		},
+		{
+			"id": "509-512",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 938,
+			"title": "509-512"
+		},
+		{
+			"id": "509-514",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 1036,
+			"title": "509-514"
+		},
+		{
+			"id": "509A-514",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 1154,
+			"title": "509A-514"
+		},
+		{
+			"id": "511-516",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 1252,
+			"title": "511-516"
+		},
+		{
+			"id": "513-518",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 1370,
+			"title": "513-518"
+		},
+		{
+			"id": "515-520",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 1508,
+			"title": "515-520"
+		},
+		{
+			"id": "517-522",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 1646,
+			"title": "517-522"
+		},
+		{
+			"id": "517A-stairs52",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 1764,
+			"title": "517A-stairs52"
+		},
+		{
+			"id": "517B-stairs52",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 1824,
+			"title": "517B-stairs52"
+		},
+		{
+			"id": "519-544",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 1885,
+			"title": "519-544"
+		},
+		{
+			"id": "519-543",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 1963,
+			"title": "519-543"
+		},
+		{
+			"id": "519-524",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 2041,
+			"title": "519-524"
+		},
+		{
+			"id": "521-526",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 2179,
+			"title": "521-526"
+		},
+		{
+			"id": "523-526",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 2317,
+			"title": "523-526"
+		},
+		{
+			"id": "525-528",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 2455,
+			"title": "525-528"
+		},
+		{
+			"id": "wall-530",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 2613,
+			"title": "wall-530"
+		},
+		{
+			"id": "527-530",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 2711,
+			"title": "527-530"
+		},
+		{
+			"id": "529-532",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 2789,
+			"title": "529-532"
+		},
+		{
+			"id": "531-534",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 2927,
+			"title": "531-534"
+		},
+		{
+			"id": "533-542",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 3085,
+			"title": "533-542"
+		},
+		{
+			"id": "533-540",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 3183,
+			"title": "533-540"
+		},
+		{
+			"id": "535-stairs53",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 3261,
+			"title": "535-stairs53"
+		},
+		{
+			"id": "537-stairs53",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 3321,
+			"title": "537-stairs53"
+		},
+		{
+			"id": "539-536",
+			"description": "Коридор",
+			"type": "connector",
+			"floor": 5,
+			"latitude": 280,
+			"longitude": 3419,
+			"title": "539-536"
+		},
+		{
+			"id": "stairs41-stairs51",
+			"description": "Лестница",
+			"type": "stairs",
+			"floor": 4,
+			"latitude": 385,
+			"longitude": 322,
+			"title": "stairs41-stairs51"
+		},
+		{
+			"id": "stairs42-stairs52",
+			"description": "Лестница",
+			"type": "stairs",
+			"floor": 4,
+			"latitude": 385,
+			"longitude": 1702,
+			"title": "stairs42-stairs52"
+		},
+		{
+			"id": "stairs43-stairs53",
+			"description": "Лестница",
+			"type": "stairs",
+			"floor": 4,
+			"latitude": 385,
+			"longitude": 3243,
+			"title": "stairs43-stairs53"
+		},
+		{
+			"id": "stairs51-stairs61",
+			"description": "Лестница",
+			"type": "stairs",
+			"floor": 5,
+			"latitude": 385,
+			"longitude": 322,
+			"title": "stairs51-stairs61"
+		},
+		{
+			"id": "stairs52-stairs62",
+			"description": "Лестница",
+			"type": "stairs",
+			"floor": 5,
+			"latitude": 385,
+			"longitude": 1778,
+			"title": "stairs52-stairs62"
+		},
+		{
+			"id": "stairs53-stairs63",
+			"description": "Лестница",
+			"type": "stairs",
+			"floor": 5,
+			"latitude": 385,
+			"longitude": 3276,
+			"title": "stairs53-stairs63"
+		},
+		{
+			"id": "elevator4-elevator5",
+			"description": "Лифт",
+			"type": "elevator",
+			"floor": 4,
+			"latitude": 145,
+			"longitude": 423,
+			"title": "elevator4-elevator5"
+		},
+		{
+			"id": "elevator5-elevator6",
+			"description": "Лифт",
+			"type": "elevator",
+			"floor": 5,
+			"latitude": 145,
+			"longitude": 501,
+			"title": "elevator5-elevator6"
+		}
+	],
+	"edges": [
+		{ "from": "501-502", "to": "501A-502", "weight": 1 },
+		{ "from": "501A-502", "to": "503-504", "weight": 1 },
+		{ "from": "503-504", "to": "545-stairs51", "weight": 1 },
+		{ "from": "545-stairs51", "to": "stairs41-stairs51", "weight": 1 },
+		{ "from": "545-stairs51", "to": "stairs51-stairs61", "weight": 1 },
+		{ "from": "545-stairs51", "to": "545-506", "weight": 1 },
+		{ "from": "545-506", "to": "elevator5-508", "weight": 1 },
+		{ "from": "elevator5-508", "to": "elevator4-elevator5", "weight": 1 },
+		{ "from": "elevator5-508", "to": "elevator5-elevator6", "weight": 1 },
+		{ "from": "elevator5-508", "to": "505-510", "weight": 1 },
+		{ "from": "505-510", "to": "505-510A", "weight": 1 },
+		{ "from": "505-510A", "to": "505-510B", "weight": 1 },
+		{ "from": "505-510B", "to": "507-512", "weight": 1 },
+		{ "from": "507-512", "to": "509-512", "weight": 1 },
+		{ "from": "509-512", "to": "509-514", "weight": 1 },
+		{ "from": "509-514", "to": "509A-514", "weight": 1 },
+		{ "from": "509A-514", "to": "511-516", "weight": 1 },
+		{ "from": "511-516", "to": "513-518", "weight": 1 },
+		{ "from": "513-518", "to": "515-520", "weight": 1 },
+		{ "from": "515-520", "to": "517-522", "weight": 1 },
+		{ "from": "517-522", "to": "517A-stairs52", "weight": 1 },
+		{ "from": "517A-stairs52", "to": "stairs42-stairs52", "weight": 1 },
+		{ "from": "517A-stairs52", "to": "stairs52-stairs62", "weight": 1 },
+		{ "from": "517A-stairs52", "to": "517B-stairs52", "weight": 1 },
+		{ "from": "517B-stairs52", "to": "519-544", "weight": 1 },
+		{ "from": "519-544", "to": "519-543", "weight": 1 },
+		{ "from": "519-543", "to": "519-524", "weight": 1 },
+		{ "from": "519-524", "to": "521-526", "weight": 1 },
+		{ "from": "521-526", "to": "523-526", "weight": 1 },
+		{ "from": "523-526", "to": "525-528", "weight": 1 },
+		{ "from": "525-528", "to": "wall-530", "weight": 1 },
+		{ "from": "wall-530", "to": "527-530", "weight": 1 },
+		{ "from": "527-530", "to": "529-532", "weight": 1 },
+		{ "from": "529-532", "to": "531-534", "weight": 1 },
+		{ "from": "531-534", "to": "533-542", "weight": 1 },
+		{ "from": "533-542", "to": "533-540", "weight": 1 },
+		{ "from": "533-540", "to": "535-stairs53", "weight": 1 },
+		{ "from": "535-stairs53", "to": "stairs43-stairs53", "weight": 1 },
+		{ "from": "535-stairs53", "to": "stairs53-stairs63", "weight": 1 },
+		{ "from": "535-stairs53", "to": "537-stairs53", "weight": 1 },
+		{ "from": "537-stairs53", "to": "539-536", "weight": 1 }
+	]
+}

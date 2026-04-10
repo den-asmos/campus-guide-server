@@ -1,17 +1,15 @@
 import { ClassroomAttributes } from "../models/Classroom";
 
 export enum NodeType {
-	classroom,
-	connector,
-	stairs,
-	elevator,
+	classroom = "classroom",
+	connector = "connector",
+	stairs = "stairs",
+	elevator = "elevator",
 }
 
-export type GraphNode = Omit<ClassroomAttributes, "id"> & {
+export type GraphNode = ClassroomAttributes & {
 	type: NodeType;
 };
-
-export type DirectionNode = GraphNode & { points: string };
 
 export type GraphEdge = {
 	from: string;
@@ -21,7 +19,6 @@ export type GraphEdge = {
 
 export type Graph = {
 	nodes: Map<string, GraphNode>;
-	edges: GraphEdge[];
 	adjacency: Adjacency;
 };
 
@@ -33,3 +30,8 @@ export type FloorFile = {
 export type LocationLinks = Record<string, string>;
 
 export type Adjacency = Map<string, { to: string; weight: number }[]>;
+
+export type PathStep = {
+	nodeId: string;
+	node: GraphNode;
+};
