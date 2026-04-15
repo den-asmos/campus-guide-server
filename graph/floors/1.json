@@ -5,7 +5,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 920,
 			"title": "wall-151"
 		},
@@ -86,7 +86,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 1171,
 			"title": "wall-stairs11"
 		},
@@ -95,7 +95,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 1309,
 			"title": "elevator1-wall"
 		},
@@ -104,7 +104,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 1427,
 			"title": "101-100"
 		},
@@ -113,7 +113,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 1505,
 			"title": "101-102"
 		},
@@ -122,7 +122,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 1583,
 			"title": "103-102C"
 		},
@@ -131,7 +131,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 1661,
 			"title": "103-102B"
 		},
@@ -140,7 +140,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 1779,
 			"title": "105-102A"
 		},
@@ -149,7 +149,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 1897,
 			"title": "105A-104"
 		},
@@ -158,7 +158,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 1975,
 			"title": "107-106"
 		},
@@ -167,7 +167,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 2053,
 			"title": "wall-108"
 		},
@@ -176,7 +176,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 1231,
 			"title": "wall-110"
 		},
@@ -185,7 +185,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 2209,
 			"title": "109-112"
 		},
@@ -194,7 +194,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 2287,
 			"title": "111-114"
 		},
@@ -203,7 +203,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 2385,
 			"title": "113-116"
 		},
@@ -212,7 +212,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 2503,
 			"title": "113-118"
 		},
@@ -221,7 +221,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 2601,
 			"title": "115-120"
 		},
@@ -230,7 +230,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 2700,
 			"title": "wall-stairs12"
 		},
@@ -239,7 +239,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 2799,
 			"title": "117-120A"
 		},
@@ -248,7 +248,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 2877,
 			"title": "117-122A"
 		},
@@ -257,7 +257,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 2955,
 			"title": "117-122"
 		},
@@ -266,7 +266,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 3093,
 			"title": "119-124"
 		},
@@ -275,7 +275,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 3231,
 			"title": "119-126"
 		},
@@ -284,7 +284,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 3369,
 			"title": "121-128"
 		},
@@ -293,7 +293,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 3507,
 			"title": "121-130"
 		},
@@ -302,7 +302,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 3585,
 			"title": "123-132"
 		},
@@ -311,7 +311,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 3683,
 			"title": "123A-134"
 		},
@@ -320,7 +320,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 3781,
 			"title": "125-136"
 		},
@@ -329,7 +329,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 3865,
 			"title": "125-138"
 		},
@@ -338,7 +338,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 3964,
 			"title": "127-138"
 		},
@@ -347,7 +347,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 4057,
 			"title": "127-156"
 		},
@@ -356,7 +356,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 4135,
 			"title": "127-157"
 		},
@@ -365,7 +365,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 4233,
 			"title": "wall-stairs13"
 		},
@@ -374,7 +374,7 @@
 			"description": "Коридор",
 			"type": "connector",
 			"floor": 1,
-			"latitude": 834,
+			"latitude": 850,
 			"longitude": 4371,
 			"title": "wall-140"
 		},

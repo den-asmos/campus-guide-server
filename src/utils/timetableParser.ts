@@ -38,6 +38,8 @@ enum LessonType {
 	practical = "пз",
 	control = "куср",
 	credit = "зач",
+	exam = "экз",
+	consultation = "конс",
 	other = "другое",
 }
 
@@ -79,7 +81,7 @@ export class TimetableParser {
 	private parseDay(
 		data: JsonData,
 		dayIndex: number,
-		groupsInfo: GroupInfo[]
+		groupsInfo: GroupInfo[],
 	): DaySchedule {
 		const startDate = this.extractStartDate(data[8][0]);
 		const date = dayjs(startDate)
@@ -123,7 +125,7 @@ export class TimetableParser {
 				data,
 				lessonRowIndex,
 				lessonNumber,
-				timeRange
+				timeRange,
 			);
 
 			this.distributeLessonsToGroups(daySchedule, groupsInfo, rowLessons);
@@ -140,7 +142,7 @@ export class TimetableParser {
 		const groupNamesRow = data[12];
 		const subgroupNamesRow = data[13];
 
-		for (let column = 3; column < specialtiesRow.length; column += 2) {
+		for (let column = 3; column < specialtiesRow.length; column++) {
 			const course = coursesRow[column];
 			const specialty = specialtiesRow[column];
 			const groupName = groupNamesRow[column];
@@ -160,11 +162,7 @@ export class TimetableParser {
 					specialty: specialty.trim(),
 					groupName: groupName.trim(),
 					column,
-					subgroupsInfo: this.findSubgroups(
-						column,
-						subgroupNamesRow,
-						groupName.trim()
-					),
+					subgroupsInfo: this.findSubgroups(subgroupNamesRow, groupName.trim()),
 				});
 			}
 		}
@@ -173,9 +171,8 @@ export class TimetableParser {
 	}
 
 	private findSubgroups(
-		mainColumn: number,
 		subgroupsRow: JsonDataItem,
-		mainGroupName: string
+		mainGroupName: string,
 	): Array<{ subgroupName: string; column: number }> {
 		const subgroups: Array<{ subgroupName: string; column: number }> = [];
 
@@ -201,14 +198,14 @@ export class TimetableParser {
 	private distributeLessonsToGroups(
 		daySchedule: DaySchedule,
 		groupsInfo: GroupInfo[],
-		rowLessons: Array<{ column: number; lesson: Lesson }>
+		rowLessons: Array<{ column: number; lesson: Lesson }>,
 	): void {
 		for (const groupInfo of groupsInfo) {
 			let group = daySchedule.groups.find(
 				(item) =>
 					item.course === groupInfo.course &&
 					item.specialty === groupInfo.specialty &&
-					item.groupName === groupInfo.groupName
+					item.groupName === groupInfo.groupName,
 			);
 
 			if (!group) {
@@ -223,7 +220,7 @@ export class TimetableParser {
 
 			for (const subgroupInfo of groupInfo.subgroupsInfo) {
 				let subgroup = group.subgroups.find(
-					(item) => item.subgroupName === subgroupInfo.subgroupName
+					(item) => item.subgroupName === subgroupInfo.subgroupName,
 				);
 
 				if (!subgroup) {
@@ -236,7 +233,7 @@ export class TimetableParser {
 				}
 
 				const subgroupLesson = rowLessons.find(
-					(lesson) => lesson.column === subgroupInfo.column
+					(lesson) => lesson.column === subgroupInfo.column,
 				);
 
 				if (subgroupLesson) {
@@ -250,7 +247,7 @@ export class TimetableParser {
 		data: JsonData,
 		lessonRowIndex: number,
 		lessonNumber: number,
-		timeRange: string
+		timeRange: string,
 	): Array<{ column: number; lesson: Lesson }> {
 		const lessons: Array<{ column: number; lesson: Lesson }> = [];
 
@@ -260,7 +257,7 @@ export class TimetableParser {
 				lessonRowIndex,
 				column,
 				lessonNumber,
-				timeRange
+				timeRange,
 			);
 
 			if (lesson) {
@@ -276,7 +273,7 @@ export class TimetableParser {
 		lessonRowIndex: number,
 		column: number,
 		lessonNumber: number,
-		timeRange: string
+		timeRange: string,
 	): Lesson | null {
 		const subjectCell = data[lessonRowIndex]?.[column];
 		const lecturerCell = data[lessonRowIndex + 1]?.[column];
@@ -302,6 +299,10 @@ export class TimetableParser {
 			type = LessonType.control;
 		} else if (subjectCell.toLowerCase().includes("(зач)")) {
 			type = LessonType.credit;
+		} else if (subjectCell.toLowerCase().includes("(экз)")) {
+			type = LessonType.exam;
+		} else if (subjectCell.toLowerCase().includes("(конс)")) {
+			type = LessonType.consultation;
 		} else if (subjectCell.toLowerCase().includes("(пз)")) {
 			type = LessonType.practical;
 		}
@@ -311,8 +312,14 @@ export class TimetableParser {
 		if (classroomCell && typeof classroomCell === "string") {
 			const classroomMatch = classroomCell.match(/ауд\.\s*(.+)/);
 
-			if (classroomMatch) {
-				classroom = classroomMatch[1];
+			if (classroomCell.includes("Технопарк")) {
+				classroom = "Технопарк";
+			} else if (classroomCell.includes("Планетарий")) {
+				classroom = "702";
+			} else if (classroomCell.includes("Актовый")) {
+				classroom = "153";
+			} else if (classroomMatch) {
+				classroom = classroomMatch[1].toUpperCase();
 			} else {
 				classroom = classroomCell.toLowerCase();
 			}

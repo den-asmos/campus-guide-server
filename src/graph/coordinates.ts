@@ -59,24 +59,40 @@ export const buildLeg = (a: GraphNode, b: GraphNode): PathLeg => {
 };
 
 const toPolylinePoints = (segment: LineSegment): string => {
-	return `${segment.x1},${segment.y1} ${segment.x1},${segment.y1} ${segment.x2},${segment.y2} ${segment.x2},${segment.y2}`;
+	return `${segment.x1},${segment.y1} ${segment.x2},${segment.y2}`;
 };
 
-export const buildPathPolylines = (nodes: GraphNode[]): string[] => {
-	if (nodes.length < 2) {
-		return [];
+export const legToPolylinePoints = (leg: PathLeg): string => {
+	const start = `${leg.first.x1},${leg.first.y1}`;
+	const end = `${(leg.second ?? leg.first).x2},${(leg.second ?? leg.first).y2}`;
+
+	if (!leg.second) {
+		return `${start} ${end}`;
 	}
 
-	const result: string[] = [];
+	return `${start} ${leg.cornerX},${leg.cornerY} ${end}`;
+};
+
+export const buildContinuousPolyline = (nodes: GraphNode[]): string => {
+	if (nodes.length === 0) {
+		return "";
+	}
+	if (nodes.length === 1) {
+		return `${nodes[0].latitude},${nodes[0].longitude}`;
+	}
+
+	const points: string[] = [`${nodes[0].latitude},${nodes[0].longitude}`];
 
 	for (let i = 0; i < nodes.length - 1; i++) {
 		const leg = buildLeg(nodes[i], nodes[i + 1]);
 
-		result.push(toPolylinePoints(leg.first));
 		if (leg.second) {
-			result.push(toPolylinePoints(leg.second));
+			points.push(`${leg.cornerX},${leg.cornerY}`);
 		}
+
+		const end = leg.second ?? leg.first;
+		points.push(`${end.x2},${end.y2}`);
 	}
 
-	return result;
+	return points.join(" ");
 };

@@ -13,13 +13,6 @@ const start = async () => {
 	app.listen(PORT, "0.0.0.0", () => {
 		console.log(`Server running on http://localhost:${PORT}`);
 	});
-
-	// const directionService = new DirectionService();
-	// const response = await directionService.buildDirection({
-	// 	origin: "703",
-	// 	destination: "303",
-	// });
-	// console.log(response);
 };
 
 start();

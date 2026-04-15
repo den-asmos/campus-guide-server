@@ -1,4 +1,4 @@
-import { ClassroomAttributes } from "../models/Classroom";
+import { ClassroomAttributes, Floor } from "../models/Classroom";
 
 export enum NodeType {
 	classroom = "classroom",
@@ -31,7 +31,10 @@ export type LocationLinks = Record<string, string>;
 
 export type Adjacency = Map<string, { to: string; weight: number }[]>;
 
-export type PathStep = {
-	nodeId: string;
-	node: GraphNode;
+export type FloorGroup = {
+	floor: Floor;
+	path: string;
+	nodes: GraphNode[];
+	origin: GraphNode;
+	destination: GraphNode;
 };

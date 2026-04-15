@@ -38,7 +38,7 @@ export class TimetableRepository {
 			const matches =
 				config.keywords.every((keyword) => linkText.includes(keyword)) &&
 				config.linkKeywords.every((linkKeyword) =>
-					hrefText.includes(linkKeyword)
+					hrefText.includes(linkKeyword),
 				);
 
 			if (!matches) {

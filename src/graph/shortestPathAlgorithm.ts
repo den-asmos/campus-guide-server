@@ -1,26 +1,26 @@
+import { buildContinuousPolyline } from "./coordinates";
 import { MinHeap } from "./minHeap";
-import { Graph, PathStep } from "./types";
+import { FloorGroup, Graph, GraphNode } from "./types";
 
 type HeapEntry = {
 	nodeId: string;
 	distance: number;
 };
 
-const toStep = (graph: Graph, nodeId: string): PathStep => ({
-	nodeId,
-	node: graph.nodes.get(nodeId)!,
-});
+const getNode = (graph: Graph, nodeId: string): GraphNode => {
+	return graph.nodes.get(nodeId)!;
+};
 
 const reconstructPath = (
 	graph: Graph,
 	previous: Map<string, string | null>,
 	destinationId: string,
-): PathStep[] => {
-	const path: PathStep[] = [];
+): GraphNode[] => {
+	const path: GraphNode[] = [];
 	let current: string | null = destinationId;
 
 	while (current !== null) {
-		path.push(toStep(graph, current));
+		path.push(getNode(graph, current));
 		current = previous.get(current) ?? null;
 	}
 
@@ -31,13 +31,13 @@ export const findShortestPath = (
 	graph: Graph,
 	originId: string,
 	destinationId: string,
-): PathStep[] | null => {
+): GraphNode[] | null => {
 	if (!graph.nodes.has(originId) || !graph.nodes.has(destinationId)) {
 		return null;
 	}
 
 	if (originId === destinationId) {
-		return [toStep(graph, originId)];
+		return [getNode(graph, originId)];
 	}
 
 	const distance = new Map<string, number>();
@@ -79,4 +79,43 @@ export const findShortestPath = (
 	}
 
 	return reconstructPath(graph, previous, destinationId);
+};
+
+export const groupByFloor = (nodes: GraphNode[]): FloorGroup[] => {
+	if (nodes.length === 0) {
+		return [];
+	}
+
+	const groups: FloorGroup[] = [];
+	let currentFloor = nodes[0].floor;
+	let currentNodes: GraphNode[] = [];
+
+	for (let i = 0; i < nodes.length; i++) {
+		const node = nodes[i];
+
+		if (node.floor !== currentFloor) {
+			groups.push({
+				floor: currentFloor,
+				path: buildContinuousPolyline(currentNodes),
+				nodes: currentNodes,
+				origin: currentNodes[0],
+				destination: currentNodes[currentNodes.length - 1],
+			});
+
+			currentFloor = node.floor;
+			currentNodes = [];
+		}
+
+		currentNodes.push(node);
+	}
+
+	groups.push({
+		floor: currentFloor,
+		path: buildContinuousPolyline(currentNodes),
+		nodes: currentNodes,
+		origin: currentNodes[0],
+		destination: currentNodes[currentNodes.length - 1],
+	});
+
+	return groups;
 };
