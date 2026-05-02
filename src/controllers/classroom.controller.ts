@@ -29,7 +29,7 @@ export class ClassroomController {
 		try {
 			const dto: SearchClassroomDto = {
 				query: req.validatedQuery.query as string,
-				limit: Number(req.validatedQuery.limit) ?? undefined,
+				limit: Number(req.validatedQuery.limit ?? 20),
 			};
 			const result = await this.classroomService.searchClassroom(dto);
 			res.json(result);

@@ -33,7 +33,8 @@ export type LocationLinks = Record<string, string>;
 export type Adjacency = Map<string, { to: string; weight: number }[]>;
 
 export type FloorGroup = {
-	floor: Floor;
+	fromFloor: Floor;
+	toFloor: Floor;
 	path: string;
 	origin: GraphNode;
 	destination: GraphNode;

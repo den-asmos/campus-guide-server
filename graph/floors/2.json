@@ -382,10 +382,10 @@
 		{ "from": "243-wall", "to": "244-wall", "weight": 1 },
 		{ "from": "200A-200D", "to": "wall-stairs21", "weight": 1 },
 		{ "from": "wall-stairs21", "to": "stairs21-stairs31", "weight": 1 },
-		{ "from": "wall-stairs21", "to": "stairs11-stairs21", "weight": 1 },
+		{ "from": "stairs11-stairs21", "to": "stairs21-stairs31", "weight": 1 },
 		{ "from": "wall-stairs21", "to": "elevator2-200", "weight": 1 },
 		{ "from": "elevator2-200", "to": "elevator2-elevator3", "weight": 1 },
-		{ "from": "elevator2-200", "to": "elevator1-elevator2", "weight": 1 },
+		{ "from": "elevator1-elevator2", "to": "elevator2-elevator3", "weight": 1 },
 		{ "from": "elevator2-200", "to": "201-202", "weight": 1 },
 		{ "from": "201-202", "to": "203-204B", "weight": 1 },
 		{ "from": "203-204B", "to": "205-204", "weight": 1 },
@@ -396,7 +396,7 @@
 		{ "from": "wall-206", "to": "211-208", "weight": 1 },
 		{ "from": "211-208", "to": "211-stairs22", "weight": 1 },
 		{ "from": "211-stairs22", "to": "stairs22-stairs32", "weight": 1 },
-		{ "from": "211-stairs22", "to": "stairs12-stairs22", "weight": 1 },
+		{ "from": "stairs12-stairs22", "to": "stairs22-stairs32", "weight": 1 },
 		{ "from": "211-stairs22", "to": "213-228", "weight": 1 },
 		{ "from": "213-228", "to": "213-227", "weight": 1 },
 		{ "from": "213-227", "to": "213-210", "weight": 1 },
@@ -409,7 +409,7 @@
 		{ "from": "223-220", "to": "225-226", "weight": 1 },
 		{ "from": "225-226", "to": "236-stairs23", "weight": 1 },
 		{ "from": "236-stairs23", "to": "stairs23-stairs33", "weight": 1 },
-		{ "from": "236-stairs23", "to": "stairs13-stairs23", "weight": 1 },
+		{ "from": "stairs13-stairs23", "to": "stairs23-stairs33", "weight": 1 },
 		{ "from": "236-stairs23", "to": "236-222", "weight": 1 }
 	]
 }

@@ -1,8 +1,8 @@
 import { GraphNode, NodeType } from "./types";
 
 export const FLOOR_CHANGE_PENALTY: Record<string, number> = {
-	[NodeType.stairs]: 5,
-	[NodeType.elevator]: 8,
+	[NodeType.stairs]: 8,
+	[NodeType.elevator]: 5,
 };
 
 export const floorChangePenalty = (a: GraphNode, b: GraphNode): number => {

@@ -7,6 +7,12 @@ export const getGroupTimetableSchema = Joi.object({
 	group: Joi.string().valid(...Object.values(Group)),
 });
 
+export const getLecturerTimetableSchema = Joi.object({
+	firstName: Joi.string().min(2).max(100).required(),
+	lastName: Joi.string().min(2).max(100).required(),
+	middleName: Joi.string().min(2).max(100).required(),
+});
+
 export const getClassroomTimetableSchema = Joi.object({
 	classroom: Joi.string().required(),
 });

@@ -1,9 +1,7 @@
 import dotenv from "dotenv";
-import { NotFoundError } from "../errors/app-error";
 import { Faculty } from "../models/user.model";
 import {
 	DaySchedule,
-	GroupDaySchedule,
 	GroupTimetableDto,
 	LecturerTimetableDto,
 	TimetableDownload,
@@ -25,7 +23,7 @@ export class TimetableService {
 		this.scheduler.start();
 	}
 
-	async getGroupTimetable(dto: GroupTimetableDto): Promise<GroupDaySchedule[]> {
+	async getGroupTimetable(dto: GroupTimetableDto): Promise<DaySchedule[]> {
 		const downloads = await this.downloader.download(dto.faculty);
 		const days = this.parseTimetableFiles(downloads);
 
@@ -34,11 +32,7 @@ export class TimetableService {
 				(g) => g.course === dto.course && g.groupName === dto.group,
 			);
 
-			if (!group) {
-				throw new NotFoundError("Группа не найдена");
-			}
-
-			return { date, dayName, group };
+			return { date, dayName, groups: group ? [group] : [] };
 		});
 	}
 

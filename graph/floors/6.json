@@ -399,8 +399,8 @@
 		{ "from": "629-638", "to": "629-642", "weight": 1 },
 		{ "from": "629-642", "to": "629-644", "weight": 1 },
 		{ "from": "629-644", "to": "631-stairs63", "weight": 1 },
-		{ "from": "631-stairs63", "to": "stairs53-stairs63", "weight": 1 },
 		{ "from": "631-stairs63", "to": "stairs63-stairs7", "weight": 1 },
+		{ "from": "stairs53-stairs63", "to": "stairs63-stairs7", "weight": 1 },
 		{ "from": "631-stairs63", "to": "633-640", "weight": 1 }
 	]
 }

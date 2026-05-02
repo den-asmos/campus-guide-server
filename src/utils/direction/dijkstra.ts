@@ -95,7 +95,8 @@ export const groupByFloor = (nodes: GraphNode[]): FloorGroup[] => {
 
 		if (node.floor !== currentFloor) {
 			groups.push({
-				floor: currentFloor,
+				fromFloor: currentFloor,
+				toFloor: node.floor,
 				path: buildContinuousPolyline(currentNodes),
 				origin: currentNodes[0],
 				destination: currentNodes[currentNodes.length - 1],
@@ -109,7 +110,8 @@ export const groupByFloor = (nodes: GraphNode[]): FloorGroup[] => {
 	}
 
 	groups.push({
-		floor: currentFloor,
+		fromFloor: currentFloor,
+		toFloor: currentFloor,
 		path: buildContinuousPolyline(currentNodes),
 		origin: currentNodes[0],
 		destination: currentNodes[currentNodes.length - 1],

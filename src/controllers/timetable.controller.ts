@@ -1,5 +1,4 @@
 import { NextFunction, Request, Response } from "express";
-import { UnauthorizedError } from "../errors/app-error";
 import { Faculty, Group } from "../models/user.model";
 import { TimetableService } from "../services/timetable.service";
 import { GroupTimetableDto } from "../types/timetable.types";
@@ -31,16 +30,12 @@ export class TimetableController {
 		next: NextFunction,
 	) => {
 		try {
-			if (!req.user) {
-				return next(new UnauthorizedError("Требуется авторизация"));
-			}
-
-			const { firstName, lastName, middleName } = req.user;
-			const timetable = await this.timetableService.getLecturerTimetable({
-				firstName,
-				lastName,
-				middleName,
-			});
+			const query = {
+				firstName: req.validatedQuery.firstName as string,
+				lastName: req.validatedQuery.lastName as string,
+				middleName: req.validatedQuery.middleName as string,
+			};
+			const timetable = await this.timetableService.getLecturerTimetable(query);
 			res.json(timetable);
 		} catch (error) {
 			next(error);

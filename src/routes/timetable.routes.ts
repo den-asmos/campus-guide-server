@@ -1,9 +1,7 @@
 import { Router } from "express";
 import { TimetableController } from "../controllers/timetable.controller";
 import { authenticateJwt } from "../middlewares/auth.middleware";
-import { requireRole } from "../middlewares/role.middleware";
 import { validate } from "../middlewares/validate.middleware";
-import { Role } from "../models/user.model";
 import {
 	timetableFileRepository,
 	timetableScraperRepository,
@@ -11,6 +9,7 @@ import {
 import {
 	getClassroomTimetableSchema,
 	getGroupTimetableSchema,
+	getLecturerTimetableSchema,
 } from "../schemas/timetable.schema";
 import { TimetableService } from "../services/timetable.service";
 import { FileCleaner } from "../utils/file-cleaner";
@@ -47,7 +46,7 @@ router.get(
 router.get(
 	"/lecturer",
 	authenticateJwt,
-	requireRole([Role.lecturer]),
+	validate({ query: getLecturerTimetableSchema }),
 	timetableController.getLecturerTimetable,
 );
 router.get(

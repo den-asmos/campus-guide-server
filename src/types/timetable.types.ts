@@ -24,12 +24,6 @@ export interface LecturerTimetableDto {
 	middleName: User["middleName"];
 }
 
-export interface GroupDaySchedule {
-	date: string;
-	dayName: string;
-	group: TimetableGroup | null;
-}
-
 export interface DaySchedule {
 	date: string;
 	dayName: string;
