@@ -1,31 +1,31 @@
 import { z } from "zod";
 import { NodeType } from "../utils/direction/types";
 
-const GraphNodeTypeSchema = z.enum(NodeType);
+const graphNodeTypeSchema = z.enum(NodeType);
 
-export const ConnectorSchema = z.object({
-	id: z.string().min(1),
-	title: z.string().min(1),
-	description: z.string(),
-	type: GraphNodeTypeSchema,
-	floor: z.number().int().min(1).max(7),
-	latitude: z.number(),
-	longitude: z.number(),
+export const connectorSchema = z.object({
+  id: z.string().min(1).normalize(),
+  title: z.string().min(1).normalize(),
+  description: z.string().normalize(),
+  type: graphNodeTypeSchema,
+  floor: z.number().int().min(1).max(7),
+  latitude: z.number(),
+  longitude: z.number(),
 });
 
-export const GraphEdgeSchema = z.object({
-	from: z.string().min(1),
-	to: z.string().min(1),
-	weight: z.number().positive(),
+export const graphEdgeSchema = z.object({
+  from: z.string().min(1).normalize(),
+  to: z.string().min(1).normalize(),
+  weight: z.number().positive(),
 });
 
-export const FloorFileSchema = z.object({
-	connectors: z.array(ConnectorSchema),
-	edges: z.array(GraphEdgeSchema),
+export const floorFileSchema = z.object({
+  connectors: z.array(connectorSchema),
+  edges: z.array(graphEdgeSchema),
 });
 
-export const ConnectorFileSchema = z.object({
-	connectors: z.array(ConnectorSchema),
+export const connectorFileSchema = z.object({
+  connectors: z.array(connectorSchema),
 });
 
-export const LocationLinksSchema = z.record(z.string(), z.string());
+export const LocationLinksSchema = z.record(z.string().normalize(), z.string().normalize());
